@@ -19,7 +19,7 @@ defmodule Rldn.Mixfile do
   def application do
     [mod: {Rldn, []},
      applications: [:observer_cli, :ecto_mnesia, :phoenix, :phoenix_pubsub,
-                    :phoenix_html, :cowboy, :logger, :gettext,
+                    :phoenix_html, :cowboy, :logger, :gettext, :comeonin,
                     :phoenix_ecto, :postgrex]]
   end
 
@@ -34,8 +34,9 @@ defmodule Rldn.Mixfile do
     [{:phoenix, "~> 1.2.4"},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.0"},
-     {:ecto_mnesia, "~> 0.9.0"},
-     {:observer_cli, "~> 1.1.0"},
+     {:ecto_mnesia, "~> 0.9.0"}, # for development so you dont need sql
+     {:observer_cli, "~> 1.1.0"}, # cli access to observer
+     {:comeonin, "~> 2.0"}, # hashing library
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
