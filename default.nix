@@ -10,6 +10,13 @@ stdenv.mkDerivation rec {
     stdenv
     zlib
     glibcLocales
+    inotify-tools
   ];
   pathsToLink = [ "/include" ];
+
+  shellHook = ''
+    function phoenix {
+      iex -S mix phoenix.server
+    }
+  '';
 }
