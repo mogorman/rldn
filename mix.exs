@@ -36,7 +36,7 @@ defmodule Rldn.Mixfile do
      {:phoenix_ecto, "~> 3.0"},
      {:ecto_mnesia, "~> 0.9.0"}, # for development so you dont need sql
      {:observer_cli, "~> 1.1.0"}, # cli access to observer
-     {:comeonin, "~> 2.0"}, # hashing library
+     {:comeonin, "~> 3.2.0"}, # hashing library
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
