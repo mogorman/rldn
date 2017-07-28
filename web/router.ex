@@ -7,6 +7,7 @@ defmodule Rldn.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug Rldn.Auth, repo: Rldn.Repo
   end
 
   pipeline :api do
